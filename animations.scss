@@ -1,0 +1,52 @@
+//animations-------------------------------------------------------------------------------------------------------------------------------
+@keyframes slide-up-out {
+  to {
+    transform: translateY(-101%);
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-fade {
+  to {
+    transform: rotate(-360deg) scale(15);
+    transform: rotate(-360deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-down-in {
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes letter-spacing {
+  0% {
+    letter-spacing: 3rem;
+  }
+  to {
+    letter-spacing: 0.5rem;
+  }
+}
+
+@keyframes right-enter {
+  to {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes translate-x-reset {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes translate-y-reset {
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

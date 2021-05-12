@@ -1,0 +1,117 @@
+@-webkit-keyframes slide-up-out {
+  to {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up-out {
+  to {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate-fade {
+  to {
+    -webkit-transform: rotate(-360deg) scale(15);
+            transform: rotate(-360deg) scale(15);
+    -webkit-transform: rotate(-360deg) scale(0);
+            transform: rotate(-360deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-fade {
+  to {
+    -webkit-transform: rotate(-360deg) scale(15);
+            transform: rotate(-360deg) scale(15);
+    -webkit-transform: rotate(-360deg) scale(0);
+            transform: rotate(-360deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-down-in {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-in {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes letter-spacing {
+  0% {
+    letter-spacing: 3rem;
+  }
+  to {
+    letter-spacing: 0.5rem;
+  }
+}
+
+@keyframes letter-spacing {
+  0% {
+    letter-spacing: 3rem;
+  }
+  to {
+    letter-spacing: 0.5rem;
+  }
+}
+
+@-webkit-keyframes right-enter {
+  to {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+}
+
+@keyframes right-enter {
+  to {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+}
+
+@-webkit-keyframes translate-x-reset {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes translate-x-reset {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes translate-y-reset {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes translate-y-reset {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
