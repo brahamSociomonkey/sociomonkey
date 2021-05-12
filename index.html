@@ -28,8 +28,8 @@
 
     <!-- ham-icon-container -->
     <div id="ham-icon-container">
-      <span class="ham-icon" aria-label="Main Menu">
-        <svg width="50" height="50" viewBox="0 0 100 100">
+      <span aria-label="Main Menu" class="ham-icon">
+        <svg height="50" viewbox="0 0 100 100" width="50">
           <path
             class="line line1"
             d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -54,7 +54,7 @@
     <!-- fixed mobile logo  -->
 
     <!-- header -->
-    <header id="header" class="reveal-header">
+    <header class="reveal-header" id="header">
       <nav>
         <a href="./">
           <div class="logo-container">
@@ -62,15 +62,23 @@
           </div>
         </a>
         <ul>
-          <li class="nav-link-home"><a href="./">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./work.html">Work</a></li>
+          <li class="nav-link-home">
+            <a href="./">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="./work.html">Work</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <div data-scrollbar data-custom-smooth-scroll>
+    <div data-custom-smooth-scroll data-scrollbar>
       <!-- main -->
       <main id="home">
         <!-- hero section -->
@@ -91,7 +99,16 @@
 
             <div class="slider-item slider-item-2">
               <div class="img-container">
-                <img alt="slider image" src="./assets/img-hero-slider-1.webp" />
+                <picture>
+                  <source
+                    media="(max-width: 750px)"
+                    srcset="./assets/img-hero-slider-1-mob.png"
+                  />
+                  <img
+                    alt="slider image"
+                    src="./assets/img-hero-slider-1.webp"
+                  />
+                </picture>
               </div>
               <div class="txt-container custom-hero-heading-container">
                 <h2>Revolutionizing the food experience!</h2>
@@ -100,7 +117,16 @@
             </div>
             <div class="slider-item slider-item-3">
               <div class="img-container">
-                <img alt="slider image" src="./assets/img-hero-slider-2.webp" />
+                <picture>
+                  <source
+                    media="(max-width: 750px)"
+                    srcset="./assets/img-hero-slider-2-mob.png"
+                  />
+                  <img
+                    alt="slider image"
+                    src="./assets/img-hero-slider-2.webp"
+                  />
+                </picture>
               </div>
               <div class="txt-container custom-hero-heading-container">
                 <h2>Bringing the ultimate luxury to the web.</h2>
@@ -111,8 +137,12 @@
 
           <div class="hero-buttons-container">
             <div class="buttons">
-              <button aria-label="Previous" title="previous">PREVIOUS</button>
-              <button aria-label="Next" title="next">NEXT</button>
+              <button aria-label="Previous" title="previous">
+                <img src="/assets/left-arrow.svg" alt="left arrow" />
+              </button>
+              <button aria-label="Next" title="next">
+                <img src="/assets/right-arrow.svg" alt="right arrow" />
+              </button>
             </div>
           </div>
         </section>
@@ -123,11 +153,11 @@
           title="commerce"
         >
           <div
+            class="txt-container"
             data-animname="translate-y-reset"
             data-animtiming="1"
-            data-onetime="true"
             data-delay="0"
-            class="txt-container"
+            data-onetime="true"
           >
             <h2>Commerce</h2>
             <p>
@@ -138,15 +168,15 @@
             </p>
           </div>
           <div
-            data-animname="translate-y-reset"
-            data-onetime="true"
-            data-delay=".8"
             class="img-container"
+            data-animname="translate-y-reset"
+            data-delay=".8"
+            data-onetime="true"
           >
             <img
+              alt="commerce"
               data-parallax=""
               src="./assets/photo-commerce.webp"
-              alt="commerce"
             />
           </div>
         </article>
@@ -157,11 +187,11 @@
           title="insights"
         >
           <div
+            class="txt-container"
             data-animname="translate-y-reset"
             data-animtiming="1"
-            data-onetime="true"
             data-delay="0"
-            class="txt-container"
+            data-onetime="true"
           >
             <h2>Insights</h2>
             <p>
@@ -173,15 +203,15 @@
             </p>
           </div>
           <div
-            data-animname="translate-y-reset"
-            data-onetime="true"
-            data-delay=".8"
             class="img-container"
+            data-animname="translate-y-reset"
+            data-delay=".8"
+            data-onetime="true"
           >
             <img
+              alt="insights"
               data-parallax=""
               src="./assets/photo-insights.webp"
-              alt="insights"
             />
           </div>
         </article>
@@ -192,11 +222,11 @@
           title="experience"
         >
           <div
+            class="txt-container"
             data-animname="translate-y-reset"
             data-animtiming="1"
-            data-onetime="true"
             data-delay="0"
-            class="txt-container"
+            data-onetime="true"
           >
             <h2>Experience</h2>
             <p>
@@ -208,15 +238,15 @@
             </p>
           </div>
           <div
-            data-animname="translate-y-reset"
-            data-onetime="true"
-            data-delay=".8"
             class="img-container"
+            data-animname="translate-y-reset"
+            data-delay=".8"
+            data-onetime="true"
           >
             <img
+              alt="experience"
               data-parallax=""
               src="./assets/photo-experience.webp"
-              alt="experience"
             />
           </div>
         </article>
@@ -227,11 +257,11 @@
           title="creativity"
         >
           <div
+            class="txt-container"
             data-animname="translate-y-reset"
-            data-onetime="true"
             data-animtiming="1"
             data-delay="0"
-            class="txt-container"
+            data-onetime="true"
           >
             <h2>Creativity</h2>
             <p>
@@ -243,15 +273,15 @@
           </div>
 
           <div
-            data-animname="translate-y-reset"
-            data-onetime="true"
-            data-delay=".8"
             class="img-container"
+            data-animname="translate-y-reset"
+            data-delay=".8"
+            data-onetime="true"
           >
             <img
+              alt="creativity"
               data-parallax=""
               src="./assets/photo-creativity.webp"
-              alt="creativity"
             />
           </div>
         </article>
@@ -286,6 +316,36 @@
             Area Phase-2, <br />
             New Delhi, Delhi 110028
           </address> -->
+
+            <div class="social-links-container">
+              <div class="social-link-item">
+                <a
+                  title="facebook"
+                  href="https://www.facebook.com/sociomonkey"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="facebook" src="/assets/facebook.svg" />
+                </a>
+              </div>
+              <div class="social-link-item">
+                <a
+                  title="instagram"
+                  href="https://www.instagram.com/socio.monkey/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="instagram" src="/assets/instagram.svg" />
+                </a>
+              </div>
+              <div class="social-link-item">
+                <a
+                  title="linkedin"
+                  href="https://www.linkedin.com/company/sociomonkey/mycompany/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="linkedin" src="/assets/linkedin.svg" />
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="links-container">
@@ -309,7 +369,7 @@
         <!-- <section title="google maps" class="gmaps-container">
           <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
             <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-            <script>
+            <temp data-prettydiff-ignore><script>
               (function () {
                 var setting = {
                   height: 300,
@@ -337,7 +397,7 @@
                 var to = d.getElementsByTagName("script")[0];
                 to.parentNode.insertBefore(s, to);
               })();
-            </script>
+            </script></temp>
             <a href="https://1map.com/map-embed">1 Map</a>
           </div>
         </section> -->

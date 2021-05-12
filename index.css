@@ -219,16 +219,15 @@ main #hero .hero-slider-container .slider-item .txt-container {
   display: block;
   margin: 0 auto;
   top: 20%;
-  left: 20%;
+  left: 15%;
 }
 
 main #hero .hero-slider-container .slider-item .txt-container h2 {
-  font-family: Antic Slab;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 3rem;
   line-height: 4rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.3rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -285,7 +284,7 @@ main #hero .hero-slider-container .slider-item-1 .txt-container h2 {
             transform: unset;
   }
   main #hero .hero-slider-container .slider-item .txt-container {
-    text-align: center;
+    text-align: left;
     -webkit-transform: unset;
             transform: unset;
     top: 50%;
@@ -295,7 +294,8 @@ main #hero .hero-slider-container .slider-item-1 .txt-container h2 {
             transform: translate(-50%, -50%);
   }
   main #hero .hero-slider-container .slider-item .txt-container h2 {
-    font-size: 2rem;
+    padding-left: 1rem;
+    font-size: 3.5rem;
     margin: 0 auto;
     width: unset;
     max-width: 100%;
@@ -350,13 +350,19 @@ main #hero .hero-buttons-container .buttons button {
   border: 2px solid #fff;
   z-index: 100;
   cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 main #hero .hero-buttons-container .buttons button:hover, main #hero .hero-buttons-container .buttons button:focus {
-  background: transparent;
+  opacity: .7;
   color: #fff;
+}
+
+main #hero .hero-buttons-container .buttons button img {
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main #hero .hero-buttons-container .buttons [aria-label="Previous"] {
@@ -1004,7 +1010,7 @@ footer {
   width: 100vw;
   color: #000;
   padding: 5rem 0;
-  padding-bottom: 0;
+  padding-bottom: 3rem;
   letter-spacing: 0.3rem;
 }
 
@@ -1052,6 +1058,20 @@ footer .info-container .address-container address {
   letter-spacing: 0.2rem;
   font-style: normal;
   font-weight: normal;
+}
+
+footer .info-container .address-container .social-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.2rem, 5vw, 0.5rem);
+  padding-top: 1rem;
+}
+
+footer .info-container .address-container .social-links-container .social-link-item {
+  width: 100%;
+  height: 100%;
+  max-width: 2.5rem;
 }
 
 footer .info-container .links-container {
