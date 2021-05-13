@@ -19,19 +19,19 @@ html {
 
 @media (max-width: 750px) {
   html {
-    font-size: 90%;
+    font-size: 95%;
   }
 }
 
 @media (max-width: 650px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
 }
 
 @media (max-width: 550px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 }
 
@@ -681,10 +681,6 @@ main #peoples .img-container p {
   display: none !important;
 }
 
-#contact .tabs {
-  min-height: 100vh;
-}
-
 #contact .tabs .tab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,6 +717,7 @@ main #peoples .img-container p {
 }
 
 #contact .tabs form .form-item,
+#contact .tabs form .checkboxes-container,
 #contact .tabs form .form-item-submit {
   opacity: 0;
   -webkit-transform: translateX(-10%);
@@ -734,6 +731,9 @@ main #peoples .img-container p {
 #contact .tabs form .form-item input,
 #contact .tabs form .form-item textarea,
 #contact .tabs form .form-item button,
+#contact .tabs form .checkboxes-container input,
+#contact .tabs form .checkboxes-container textarea,
+#contact .tabs form .checkboxes-container button,
 #contact .tabs form .form-item-submit input,
 #contact .tabs form .form-item-submit textarea,
 #contact .tabs form .form-item-submit button {
@@ -753,6 +753,9 @@ main #peoples .img-container p {
 #contact .tabs form .form-item input::-webkit-input-placeholder,
 #contact .tabs form .form-item textarea::-webkit-input-placeholder,
 #contact .tabs form .form-item button::-webkit-input-placeholder,
+#contact .tabs form .checkboxes-container input::-webkit-input-placeholder,
+#contact .tabs form .checkboxes-container textarea::-webkit-input-placeholder,
+#contact .tabs form .checkboxes-container button::-webkit-input-placeholder,
 #contact .tabs form .form-item-submit input::-webkit-input-placeholder,
 #contact .tabs form .form-item-submit textarea::-webkit-input-placeholder,
 #contact .tabs form .form-item-submit button::-webkit-input-placeholder {
@@ -762,6 +765,9 @@ main #peoples .img-container p {
 #contact .tabs form .form-item input:-ms-input-placeholder,
 #contact .tabs form .form-item textarea:-ms-input-placeholder,
 #contact .tabs form .form-item button:-ms-input-placeholder,
+#contact .tabs form .checkboxes-container input:-ms-input-placeholder,
+#contact .tabs form .checkboxes-container textarea:-ms-input-placeholder,
+#contact .tabs form .checkboxes-container button:-ms-input-placeholder,
 #contact .tabs form .form-item-submit input:-ms-input-placeholder,
 #contact .tabs form .form-item-submit textarea:-ms-input-placeholder,
 #contact .tabs form .form-item-submit button:-ms-input-placeholder {
@@ -771,6 +777,9 @@ main #peoples .img-container p {
 #contact .tabs form .form-item input::-ms-input-placeholder,
 #contact .tabs form .form-item textarea::-ms-input-placeholder,
 #contact .tabs form .form-item button::-ms-input-placeholder,
+#contact .tabs form .checkboxes-container input::-ms-input-placeholder,
+#contact .tabs form .checkboxes-container textarea::-ms-input-placeholder,
+#contact .tabs form .checkboxes-container button::-ms-input-placeholder,
 #contact .tabs form .form-item-submit input::-ms-input-placeholder,
 #contact .tabs form .form-item-submit textarea::-ms-input-placeholder,
 #contact .tabs form .form-item-submit button::-ms-input-placeholder {
@@ -780,6 +789,9 @@ main #peoples .img-container p {
 #contact .tabs form .form-item input::placeholder,
 #contact .tabs form .form-item textarea::placeholder,
 #contact .tabs form .form-item button::placeholder,
+#contact .tabs form .checkboxes-container input::placeholder,
+#contact .tabs form .checkboxes-container textarea::placeholder,
+#contact .tabs form .checkboxes-container button::placeholder,
 #contact .tabs form .form-item-submit input::placeholder,
 #contact .tabs form .form-item-submit textarea::placeholder,
 #contact .tabs form .form-item-submit button::placeholder {
@@ -787,6 +799,7 @@ main #peoples .img-container p {
 }
 
 #contact .tabs form .form-item textarea,
+#contact .tabs form .checkboxes-container textarea,
 #contact .tabs form .form-item-submit textarea {
   height: 1.5rem;
   max-width: 100%;
@@ -794,6 +807,7 @@ main #peoples .img-container p {
 }
 
 #contact .tabs form .form-item button,
+#contact .tabs form .checkboxes-container button,
 #contact .tabs form .form-item-submit button {
   padding: 1rem 3rem;
   border: none;
@@ -806,6 +820,9 @@ main #peoples .img-container p {
 }
 
 #contact .tabs form .form-item button:hover, #contact .tabs form .form-item button:active, #contact .tabs form .form-item button:focus,
+#contact .tabs form .checkboxes-container button:hover,
+#contact .tabs form .checkboxes-container button:active,
+#contact .tabs form .checkboxes-container button:focus,
 #contact .tabs form .form-item-submit button:hover,
 #contact .tabs form .form-item-submit button:active,
 #contact .tabs form .form-item-submit button:focus {
@@ -815,7 +832,27 @@ main #peoples .img-container p {
           transform: scale(0.95);
 }
 
+#contact .tabs form .form-item .check-box-item,
+#contact .tabs form .checkboxes-container .check-box-item,
+#contact .tabs form .form-item-submit .check-box-item {
+  padding-bottom: 0.5rem;
+}
+
+#contact .tabs form .form-item .check-box-item label input,
+#contact .tabs form .checkboxes-container .check-box-item label input,
+#contact .tabs form .form-item-submit .check-box-item label input {
+  margin-right: 0.5rem;
+  width: revert;
+}
+
+#contact .tabs form .form-item .check-box-item:last-of-type,
+#contact .tabs form .checkboxes-container .check-box-item:last-of-type,
+#contact .tabs form .form-item-submit .check-box-item:last-of-type {
+  padding-bottom: 0;
+}
+
 #contact .tabs form .form-item .message,
+#contact .tabs form .checkboxes-container .message,
 #contact .tabs form .form-item-submit .message {
   color: royalblue;
   font-size: 1rem;
@@ -979,10 +1016,13 @@ main #peoples .img-container p {
 }
 
 #contact .contact-info-container {
-  padding: 1rem 10%;
+  padding: 2rem 5%;
+  padding-bottom: 3rem;
 }
 
 #contact .contact-info-container .info-card {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 2rem;
   background: #fff;
   color: #000;

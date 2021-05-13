@@ -800,7 +800,7 @@ address {
 }
 
 .slick-dots {
-  bottom: 1rem;
+  bottom: 2.5rem;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);

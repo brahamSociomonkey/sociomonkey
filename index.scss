@@ -21,15 +21,15 @@ html {
   scroll-behavior: smooth;
 
   @media (max-width: 750px) {
-    font-size: 90%;
+    font-size: 95%;
   }
 
   @media (max-width: 650px) {
-    font-size: 80%;
+    font-size: 85%;
   }
 
   @media (max-width: 550px) {
-    font-size: 70%;
+    font-size: 75%;
   }
 }
 
@@ -673,8 +673,6 @@ main {
 
   // tabs area rules
   .tabs {
-    min-height: 100vh;
-
     .tab {
       display: flex;
       justify-content: center;
@@ -707,6 +705,7 @@ main {
     // forms rules
     form {
       .form-item,
+      .checkboxes-container,
       .form-item-submit {
         opacity: 0; //animation------
         transform: translateX(-10%); //animation------
@@ -757,6 +756,21 @@ main {
             background: #000;
             color: #fff;
             transform: scale(0.95);
+          }
+        }
+
+        .check-box-item {
+          padding-bottom: 0.5rem;
+
+          label {
+            input {
+              margin-right: 0.5rem;
+              width: revert;
+            }
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
           }
         }
 
@@ -916,9 +930,12 @@ main {
   }
 
   .contact-info-container {
-    padding: 1rem 10%;
+    padding: 2rem 5%;
+    padding-bottom: 3rem;
 
     .info-card {
+      max-width: 1400px;
+      margin: 0 auto;
       padding: 2rem;
       background: #fff;
       color: #000;

@@ -348,13 +348,24 @@ const handlePayLoad = (data, messageElement) => {
   console.log(data);
 };
 
+const getCheckboxesData = (container) => {
+  const data = [...container.children]
+    .filter((element) => element.children[0].children[0].checked)
+    .map((element) => element.children[0].children[0].value);
+
+  return data;
+};
+
 const handleFormSubmit = (e) => {
   e.preventDefault();
   const formData = {};
   const { target: form } = e;
   const { id } = form;
   const formItems = document.querySelectorAll(`#${id} .form-item`);
-  const message = document.querySelectorAll(`#${id} .form-item .message`)[0];
+  const message = document.querySelector(`#${id} .form-item .message`);
+  const checkBoxContainer = document.querySelector(
+    `#${id} .checkboxes-container`
+  );
   formData["Form Type"] = id;
   formItems.forEach((formItem) => {
     if (formItem.children[0].isEqualNode(message)) return;
@@ -362,6 +373,12 @@ const handleFormSubmit = (e) => {
     const { name, value, type } = formItem.children[1];
     formData[name] = value.trim();
   });
+
+  if (checkBoxContainer) {
+    formData[checkBoxContainer.id] = getCheckboxesData(checkBoxContainer);
+  }
+
+  console.log(formData);
 
   handlePayLoad(formData, message);
 };
