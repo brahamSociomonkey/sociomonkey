@@ -1096,7 +1096,8 @@ main #peoples .img-container p {
     width: 100vw;
   }
   #contact .tabs form .form-item,
-  #contact .tabs form .form-item-submit {
+  #contact .tabs form .form-item-submit,
+  #contact .tabs form .checkboxes-container {
     width: 80%;
   }
   #contact .tabs .join-team .rich-txt,
