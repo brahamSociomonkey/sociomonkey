@@ -1,3 +1,4 @@
+@import url(./slick-css.css);
 [data-custom-smooth-scroll] {
   width: 100%;
   height: 100vh;
@@ -773,4 +774,55 @@ article {
   .quote-container {
     margin-inline: auto;
   }
+}
+
+.social-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.2rem, 5vw, 0.5rem);
+}
+
+.social-links-container .social-link-item {
+  width: 100%;
+  height: 100%;
+  max-width: 2.5rem;
+}
+
+.social-links-container .social-link-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.slick-dots {
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.slick-dots li button {
+  background-color: #fff;
+  color: transparent;
+  border-radius: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.slick-dots li button::before {
+  display: none;
+  color: transparent;
+  background: transparent;
+}
+
+.slick-dots li.slick-active button {
+  width: 27px;
+  background-color: #de2e2e;
+  border-radius: 5px;
 }

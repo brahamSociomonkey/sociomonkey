@@ -310,6 +310,7 @@ main {
     }
 
     .hero-buttons-container {
+      display: none;
       width: 100vw;
       position: relative;
       bottom: 3rem;
@@ -340,13 +341,13 @@ main {
 
           &:hover,
           &:focus {
-            opacity: .7;
+            opacity: 0.7;
             color: #fff;
           }
 
-          img{
+          img {
             width: 1.5rem;
-object-fit: contain;
+            object-fit: contain;
           }
         }
 
@@ -914,6 +915,59 @@ object-fit: contain;
     }
   }
 
+  .contact-info-container {
+    padding: 1rem 10%;
+
+    .info-card {
+      padding: 2rem;
+      background: #fff;
+      color: #000;
+      letter-spacing: 0.2em;
+
+      .grid-container {
+        all: revert;
+        display: grid;
+        grid-template: 1fr / auto auto;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .address-area {
+        }
+
+        .social-links-area {
+          display: grid;
+          align-content: space-between;
+          gap: 1rem;
+
+          & > * {
+            margin-left: auto;
+            width: max-content;
+          }
+        }
+
+        .icon-container {
+          img {
+            max-width: 2.5rem;
+          }
+        }
+
+        // mobile rules
+        @media (max-width: 650px) {
+          grid-template: auto auto / auto;
+          justify-content: stretch;
+
+          .social-links-area {
+            & > * {
+              margin-left: revert;
+              width: max-content;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // mobile rules ---------------
   @media (max-width: 650px) {
     // article tabs ---
@@ -996,18 +1050,6 @@ footer {
         font-style: normal;
         font-weight: normal;
       }
-
-      .social-links-container{
-        display: flex;
-        gap: clamp(.2rem, 5vw, .5rem);
-        padding-top: 1rem;
-
-        .social-link-item {
-          width: 100%;
-          height: 100%;
-          max-width: 2.5rem;
-        }
-      }
     }
 
     .links-container {
@@ -1057,6 +1099,10 @@ footer {
         }
       }
     }
+  }
+
+  .social-links-container {
+    padding-top: 1rem;
   }
 }
 

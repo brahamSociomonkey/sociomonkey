@@ -1,3 +1,5 @@
+@import url(./slick-css.css);
+
 // utility classes-------------------------------------------------------------------------------------------------------------------------------
 $theme-color: #de2e2e;
 
@@ -739,5 +741,56 @@ article {
   // mobile rules
   @media (max-width: 750px) {
     margin-inline: auto;
+  }
+}
+
+.social-links-container {
+  display: flex;
+  gap: clamp(0.2rem, 5vw, 0.5rem);
+
+  .social-link-item {
+    width: 100%;
+    height: 100%;
+    max-width: 2.5rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+// custom slick rules
+.slick-dots {
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  li {
+    button {
+      background-color: #fff;
+      color: transparent;
+      border-radius: 100%;
+      transition: 0.3s ease;
+      display: inline-block;
+
+      &::before {
+        display: none;
+        color: transparent;
+        background: transparent;
+      }
+    }
+
+    &.slick-active {
+      button {
+        width: 27px;
+        background-color: #de2e2e;
+        border-radius: 5px;
+      }
+    }
   }
 }

@@ -102,6 +102,8 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     // adaptiveHeight: true,
+    dots: true,
+    arrows: false,
   });
 
   $("#contact .hero-slider-grid-container .hero-slider-container").slick({
@@ -122,13 +124,8 @@ $(document).ready(function () {
 //Intersection observer-----------------------------------------------------------
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    const {
-      delay,
-      animname,
-      onetime,
-      animtiming,
-      timingfunction,
-    } = entry.target.dataset;
+    const { delay, animname, onetime, animtiming, timingfunction } =
+      entry.target.dataset;
 
     if (entry.intersectionRatio > 0) {
       entry.target.style.animation = `${animname} ${animtiming || 1}s ${
@@ -164,7 +161,8 @@ document
     item.addEventListener(
       "click",
       (e) => {
-        const ariaLabel = e.target.attributes["aria-label"].value;
+        const ariaLabel =
+          e.target.closest("button").attributes["aria-label"].value;
         const slickButton = document.querySelector(
           `.hero-slider-container [aria-label="${ariaLabel}"]`
         );
